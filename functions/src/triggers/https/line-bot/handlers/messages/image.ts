@@ -16,7 +16,7 @@ export const messageImageHandler = async (event: MessageEvent): Promise<void> =>
       await lineClient.replyMessage(event.replyToken, msgNotText)
     } else {
       // ここで文字列をいじいじする
-      text = addHoge(text)
+      // text = addHoge(text)
       text = addNyan(text)
       // ここで文字列をいじいじする
 
