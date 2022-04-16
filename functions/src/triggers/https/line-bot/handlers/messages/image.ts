@@ -15,10 +15,10 @@ export const messageImageHandler = async (event: MessageEvent): Promise<void> =>
     if (text === null) {
       await lineClient.replyMessage(event.replyToken, msgNotText)
     } else {
-      // ここで文字列をいじいじする
+      // ここから
       // text = addHoge(text)
       text = addNyan(text)
-      // ここで文字列をいじいじする
+      // ここまで
 
       text = text.substring(0, 5000)
       await lineClient.replyMessage(event.replyToken, makeReplyMessage(text))
