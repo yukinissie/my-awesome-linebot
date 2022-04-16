@@ -3,5 +3,5 @@ export const addHoge = (text: string): string => {
 }
 
 export const addNyan = (text: string): string => {
-  return text.replace(/(。|．)/g, 'にゃん')
+  return text.replace(/(。|．)/g, 'にゃん。')
 }
