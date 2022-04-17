@@ -15,6 +15,12 @@ jobs:
       - name: Install Dependencies
         run: rm -rf node_modules && yarn install --frozen-lockfile
         working-directory: ./functions
+      - name: Set Functions env
+        run: echo '${{ secrets.FIREBASE_FUNCTIONS_ENV }}' > ./functions/.env
+      - name: Set Service Account
+        run: |
+          mkdir ./functions/key/
+          echo '${{ secrets.SERVICE_ACCOUNT }}' > ./functions/key/service-account.json
       - name: Build Functions
         run: yarn build
         working-directory: ./functions
