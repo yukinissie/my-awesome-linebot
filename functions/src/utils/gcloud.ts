@@ -1,5 +1,5 @@
 import { ImageAnnotatorClient } from '@google-cloud/vision'
-const keyFilename = `./key/my-awosome-linebot-d5659f95f1e9.json`
+const keyFilename = `./key/service-account.json`
 const vision = new ImageAnnotatorClient({ keyFilename })
 export const gcloudVision = async (content: Buffer): Promise<string | null> => {
   try {
