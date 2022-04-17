@@ -1,5 +1,5 @@
 import { MessageEvent } from '@line/bot-sdk'
-import { addHoge, addNyan } from '~/utils/awesome'
+import { addNyan } from '~/utils/awesome'
 import { gcloudVision } from '~/utils/gcloud'
 import { getMessageContent, lineClient, makeReplyMessage } from '~/utils/line'
 import { errorLogger } from '~/utils/util'
@@ -16,7 +16,6 @@ export const messageImageHandler = async (event: MessageEvent): Promise<void> =>
       await lineClient.replyMessage(event.replyToken, msgNotText)
     } else {
       // ここから
-      // text = addHoge(text)
       text = addNyan(text)
       // ここまで
 
